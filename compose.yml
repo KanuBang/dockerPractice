@@ -1,5 +1,9 @@
 services: #서비스 정의 시작
-  my-web-server: #서비스 이름
-    image: redis
+  my-db: #서비스 이름
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pwd1234
+    volumes:
+      - /Users/bangchan-u/desktop/dbdata:/var/lib/mysql
     ports:
-      - 6379:6379
+      - 3306:3306
