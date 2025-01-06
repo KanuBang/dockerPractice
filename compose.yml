@@ -1,6 +1,5 @@
 services: #서비스 정의 시작
   my-web-server: #서비스 이름
-    container_name: webserver
-    image: nginx
+    image: redis
     ports:
-      - 80:80
+      - 6379:6379
